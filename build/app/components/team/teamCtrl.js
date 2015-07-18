@@ -1,4 +1,4 @@
-app.controller('teamCtrl', function(){
-  
+app.controller('teamCtrl', function($scope){
+
 
 });

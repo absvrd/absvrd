@@ -1,8 +1,8 @@
-var app = angular.module('app', ['ui-routes']);
+var app = angular.module('app', ['ui-routes','ngAnimate', 'ngTouch', 'ngDraggable']);
 var app = angular.module('ui-routes', ['ui.router'])
 
 
-.config(["$urlRouterProvider", "$stateProvider",   function ($urlRouterProvider, $stateProvider){
+.config(["$stateProvider","$locationProvider","$urlRouterProvider",    function ($stateProvider, $locationProvider, $urlRouterProvider){
   $urlRouterProvider.otherwise('/');
     
   // $locationProvider.html5Mode(true);
@@ -40,27 +40,28 @@ var app = angular.module('ui-routes', ['ui.router'])
     
 
 }]);
-app.controller('mainCtrl', function(){
-  
+app.controller('mainCtrl', function($scope, $state){
 
-  
-
-});
-app.controller('aboutCtrl', function(){
+$scope.slide = function(){
+  $state.go('team');
+};
 
 
 });
-app.controller('blogCtrl', function(){
-
-});
-app.controller('contactCtrl', function(){
-
-});
-app.controller('homeCtrl', function(){
+app.controller('aboutCtrl', function($scope){
 
 
 });
-app.controller('teamCtrl', function(){
-  
+app.controller('blogCtrl', function($scope){
+
+});
+app.controller('contactCtrl', function($scope){
+
+});
+app.controller('homeCtrl', function($scope){
+
+});
+app.controller('teamCtrl', function($scope){
+
 
 });

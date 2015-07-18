@@ -1,4 +1,4 @@
-app.controller('aboutCtrl', function(){
+app.controller('aboutCtrl', function($scope){
 
 
 });
