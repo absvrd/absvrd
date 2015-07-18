@@ -1,0 +1,17 @@
+{
+  "name": "blank",
+  "version": "0.0.0",
+  "license": "MIT",
+  "ignore": [
+    "**/.*",
+    "node_modules",
+    "bower_components",
+    "test",
+    "tests"
+  ],
+  "dependencies": {
+    "jquery": "~2.1.4",
+    "angular-ui-router": "~0.2.15",
+    "angular": "~1.4.3"
+  }
+}

@@ -1,0 +1,16 @@
+{
+  "name": "absvrd",
+  "version": "1.0.0",
+  "description": "A basic application",
+  "main": "config.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "start": "node server.js"
+  },
+  "author": "",
+  "license": "ISC",
+  "devDependencies": {
+    "gulp": "^3.9.0",
+    "gulp-bower": "0.0.10"
+  }
+}
