@@ -1,0 +1,64 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>Absvrd Labs.</title>
+
+<!-- base for angular -->
+<!--  <base href="/"> -->
+
+  <!-- stylesheet -->
+  <link rel="stylesheet" href="../css/main.css">
+
+  <!-- javascript -->
+  <script type="text/javascript" src="libs/jquery/dist/jquery.min.js"></script>
+  <script type="text/javascript" src="libs/angular/angular.min.js"></script>
+  <script type="text/javascript" src="libs/angular-ui-router/release/angular-ui-router.min.js"></script>
+
+
+
+
+
+  <!-- angular -->
+  <script type="text/javascript" src="../app/application.js"></script>
+
+
+
+</head>
+<body ng-app="app" ng-controller="mainCtrl as main">
+
+
+  <header>
+      <nav>
+       
+
+        <ul>
+
+
+        
+          <li><a ui-sref="home">home</a></li>
+          <li><a ui-sref="about">about</a></li>
+          <li><a ui-sref="team">team</a></li>
+          <li><a ui-sref="blog">blog</a></li>
+          <li><a ui-sref="contact">contact</a></li>
+
+        </ul>
+      </nav>
+  </header>
+  
+
+  <main>
+      
+      <!-- angular templating-->      
+      <!-- angular templates render in the ng-view -->
+      <div ui-view></div>
+    
+  </main>
+
+
+
+
+
+
+</body>
+</html>
