@@ -1,3 +1,3 @@
-app.controller('blogCtrl', function(){
+app.controller('blogCtrl', function($scope){
 
 });

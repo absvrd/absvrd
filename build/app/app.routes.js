@@ -1,7 +1,7 @@
 var app = angular.module('ui-routes', ['ui.router'])
 
 
-.config(["$urlRouterProvider", "$stateProvider",   function ($urlRouterProvider, $stateProvider){
+.config(["$stateProvider","$locationProvider","$urlRouterProvider",    function ($stateProvider, $locationProvider, $urlRouterProvider){
   $urlRouterProvider.otherwise('/');
     
   // $locationProvider.html5Mode(true);

@@ -1,4 +1,3 @@
-app.controller('homeCtrl', function(){
-
+app.controller('homeCtrl', function($scope){
 
 });

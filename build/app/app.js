@@ -1,1 +1,1 @@
-var app = angular.module('app', ['ui-routes']);
+var app = angular.module('app', ['ui-routes','ngAnimate', 'ngTouch', 'ngDraggable']);
