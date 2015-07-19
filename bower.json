@@ -15,6 +15,7 @@
     "angular": "~1.4.3",
     "angular-animate": "~1.4.3",
     "angular-touch": "~1.4.3",
-    "ngDraggable": "~0.1.8"
+    "ngDraggable": "~0.1.8",
+    "angular-hotkeys": "chieffancypants/angular-hotkeys#~1.4.5"
   }
 }
