@@ -5,6 +5,8 @@
 @import 'base/global';
 @import 'base/typography';
 
+@import 'footer/base';
+
 @import 'nav/animations';
 
 
@@ -14,3 +16,6 @@
 
 @import '../../app/components/home/style/media';
 @import '../../app/components/home/style/base';
+
+
+@import '../../app/components/team/style/base';

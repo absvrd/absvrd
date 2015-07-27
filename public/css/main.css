@@ -6,12 +6,14 @@ ol,ul{list-style:none}
 blockquote,q{quotes:none}
 blockquote:after,blockquote:before,q:after,q:before{content:'';content:none}
 table{border-collapse:collapse;border-spacing:0}
-#about,.home-content{position:relative;width:90%;margin:0 auto;padding:0}
-#about .about-content,#about .about-technology,.home-content .branding-imagery,.mantra{float:left;width:100%;box-sizing:border-box}
-#about .about-content:first-child,#about .about-technology:first-child,.home-content .branding-imagery:first-child,.mantra:first-child{margin-left:0}
-@media (min-width:550px){#about .about-content,#about .about-technology,.home-content .branding-imagery,.mantra{margin-left:4%}
+#about,#team .team-bio,.home-content{position:relative;width:90%;margin:0 auto;padding:0}
+#about .about-content,#about .about-technology,#team .team-bio .hero,#team .team-bio .team-content,.home-content .branding-imagery,.mantra{float:left;width:100%;box-sizing:border-box}
+#about .about-content:first-child,#about .about-technology:first-child,#team .team-bio .hero:first-child,#team .team-bio .team-content:first-child,.home-content .branding-imagery:first-child,.mantra:first-child{margin-left:0}
+@media (min-width:550px){#about .about-content,#about .about-technology,#team .team-bio .hero,#team .team-bio .team-content,.home-content .branding-imagery,.mantra{margin-left:4%}
+#team .team-bio .hero{width:30.6666666667%}
 .home-content .branding-imagery{width:39.3333333333%}
 .mantra{width:56.6666666667%}
+#team .team-bio .team-content{width:65.3333333333%}
 #about .about-content,#about .about-technology{width:100%;margin-left:0}
 }
 #portal,body,html,main{width:100%;height:100%}
@@ -20,6 +22,7 @@ table{border-collapse:collapse;border-spacing:0}
 @font-face{font-family:eagle_bookregular;src:url(../fonts/eagle-book/eagle-book-webfont.eot);src:url(../fonts/eagle-book/eagle-book-webfont.eot?#iefix) format("embedded-opentype"),url(../fonts/eagle-book/eagle-book-webfont.woff2) format("woff2"),url(../fonts/eagle-book/eagle-book-webfont.woff) format("woff"),url(../fonts/eagle-book/eagle-book-webfont.ttf) format("truetype"),url(../fonts/eagle-book/eagle-book-webfont.svg#eagle_bookregular) format("svg");font-weight:400;font-style:normal}
 @font-face{font-family:futura_md_btbold;src:url(../fonts/futura/futura-bold-webfont.eot);src:url(../fonts/futura/futura-bold-webfont.eot?#iefix) format("embedded-opentype"),url(../fonts/futura/futura-bold-webfont.woff2) format("woff2"),url(../fonts/futura/futura-bold-webfont.woff) format("woff"),url(../fonts/futura/futura-bold-webfont.ttf) format("truetype"),url(../fonts/futura/futura-bold-webfont.svg#futura_md_btbold) format("svg");font-weight:400;font-style:normal}
 @font-face{font-family:gibsonbold;src:url(../fonts/gibson-bold/gibson-bold-webfont.eot);src:url(../fonts/gibson-bold/gibson-bold-webfont.eot?#iefix) format("embedded-opentype"),url(../fonts/gibson-bold/gibson-bold-webfont.woff2) format("woff2"),url(../fonts/gibson-bold/gibson-bold-webfont.woff) format("woff"),url(../fonts/gibson-bold/gibson-bold-webfont.ttf) format("truetype"),url(../fonts/gibson-bold/gibson-bold-webfont.svg#gibsonbold) format("svg");font-weight:400;font-style:normal}
+footer{position:fixed;left:0;bottom:0;width:100%;height:36px;background:#336}
 #nav-box{position:absolute;bottom:10px;right:10px;z-index:999999999}
 ul{height:20px;background:#f9f9f9}
 ul li{display:inline;float:left;margin:0 20px}
@@ -68,3 +71,10 @@ ul li{display:inline;float:left;margin:0 20px}
 .greeting-container hr{width:50%;height:20px;background:#000;float:right;border:0;display:block;margin-top:2%}
 .greeting-container h3{font-family:Georgia,helvetica;text-align:right;text-transform:uppercase;font-size:2vw;letter-spacing:.5vw;clear:both;margin-top:12%}
 #logo{position:absolute;background:url(../img/logo-alt.png) center no-repeat;background-size:100%;margin:20px;height:48px;width:48px}
+#team,#team .team-bio,#team .team-bio .hero{height:100%}
+#team{width:100%;background:#033}
+#team .team-bio .hero img{transform:translateY(-50%);width:100%;height:auto}
+#team .team-bio .hero img,#team .team-bio .team-content{position:relative;top:50%;-webkit-transform:translateY(-50%);-ms-transform:translateY(-50%)}
+#team .team-bio .team-content{height:60%;transform:translateY(-50%)}
+#team .team-bio .team-content h1,#team .team-bio .team-content h2,#team .team-bio .team-content p{text-align:right;width:80%;margin-left:20%}
+#team .team-bio .team-content hr{width:45%;border:0;background:#f9f9f9;height:3px;display:block;margin-left:55%}
