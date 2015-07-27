@@ -32,7 +32,7 @@ gulp.task('kill-views', function() {
 
 // copies all of the component views
 gulp.task('views', function(){
-  return gulp.src('./build/app/components/**/*.html')
+  return gulp.src('./src/app/components/**/*.html')
     .pipe(rename({dirname: ''}))
     .pipe(gulp.dest('./public/views/pages'));
 });
@@ -40,7 +40,7 @@ gulp.task('views', function(){
 
 // copies just index
 gulp.task('index', function(){
-  return gulp.src('./build/index.html')
+  return gulp.src('./src/index.html')
   .pipe(gulp.dest('./public/views'));
 });
 
@@ -54,7 +54,7 @@ gulp.task('views-master', function(callback) {
 
 
 // ===============================================
-//        asset build util
+//        asset src util
 // ===============================================
 
 gulp.task('kill-assets', function() {
@@ -67,7 +67,7 @@ gulp.task('kill-assets', function() {
 // less performant than gulp-SASS, but the functionality is much 
 // better. Multiple class extension key component of grid based design.
 gulp.task('sass', function () {
-    return sass('./build/assets/stylesheets/') 
+    return sass('./src/assets/stylesheets/') 
     .on('error', function (err) {
       console.error('Error!', err.message);
    })
@@ -98,10 +98,10 @@ gulp.task('assets-master', function(callback) {
 gulp.task('compile-angular', function(){
 
   var src = {
-    app: './build/app/app.js',
-    routes: './build/app/app.routes.js',
-    mnctrl: './build/app/shared/*.js',
-    ctrl:  './build/app/components/**/*.js',
+    app: './src/app/app.js',
+    routes: './src/app/app.routes.js',
+    mnctrl: './src/app/shared/*.js',
+    ctrl:  './src/app/components/**/*.js',
   };   
  
   return gulp.src([src.app, src.routes, src.mnctrl, src.ctrl])
@@ -133,12 +133,16 @@ gulp.task('app-master', function(callback) {
 
 gulp.task('watch', function () {
    
-    gulp.watch(['./build/app/**/**/*.js'],['app-master']);
+    gulp.watch(['./src/app/**/**/*.js'],['app-master']);
 
-    gulp.watch(['./build/*.html','./build/app/components/**/*.html'],['views-master']);
+    gulp.watch(['./src/*.html','./src/app/components/**/*.html'],['views-master']);
     
 
-    gulp.watch(['./build/assets/stylesheets/**/**/*.scss','./build/assets/stylesheets/**/*.scss'],['assets-master']);
+    gulp.watch(['./src/app/components/**/style/**/*.scss',
+                './src/app/components/**/style/*.scss',
+                './src/assets/stylesheets/*.scss',
+                './src/assets/stylesheets/**/*.scss'],
+                                    ['assets-master']);
     
 
 });
